@@ -1,0 +1,26 @@
+Pipeline for creating DELFI fragmentation features.
+
+1. bed_to_granges.sh
+    Converts bed files generated from the alignment and bedtools step into
+    GRanges in R. There is a memory intensive step that looks up the GC
+    content of each fragment, which is only feasible for low coverage samples.
+    GC content lookup is handled by GRanges by overlapping each fragment with
+    a table of all cytosine and guanine indices. Might be possible to do this
+    with bedtools intersect but bedtools doesn't have an efficient algorithm
+    when comparing to a very large table, while GenomicRanges does. This
+    script also collects CpG information for each fragment.
+
+2. gc_counts.sh
+    Creates a table for the count of fragments for each GC strata between
+    0.3 and 0.8, with increments by 0.1. This distribution is used for GC
+    correction at the fragment level.
+
+3. weights.r ../../gc-counts target.csv
+    Average together the GC distributions across each sample in the data
+    directory and save the average distribution in target.csv. This is the
+    target GC distribution used  for GC correction by reweighting each fragment.
+
+4. bin_corrected.sh
+    Create bin level data for each sample. Need to provide a reference for
+    bins you want to collect fragmentation data with. This can be done with
+    the bin.genome(binsize = 5e6, build="hg19") function  in PlasmaTools.

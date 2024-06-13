@@ -1,0 +1,4 @@
+0.0.2
+  - revisions to use target distributions in PlasmaTools[platform].[genome build]
+     - delfi/bin_corrected.sh
+     - delfi/bin_corrected.r

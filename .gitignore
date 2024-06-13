@@ -1,0 +1,14 @@
+.Rprofile
+.Rhistory
+*.sw?
+*.pdf
+delfi/samples.txt
+
+data/
+logs/
+tmp/
+references/hg19/hg19.*
+references/genome/guanine_ref.rds
+references/genome/cytosine_ref.*
+references/hg19/preparsed/hg19.*
+references/genome/all_CpG_sites.rds

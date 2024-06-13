@@ -1,0 +1,5 @@
+cytosine_ref.rds - look up table for all cytosines in hg19
+guanine_ref.rds  - look up table for all guanines in hg19 (combine with above)
+all_CpG_sites.rds - look up table for all CpGs in hg19
+heterochromatic_motifs.rds - lo up table for heterochromatic motifs in hg19
+
