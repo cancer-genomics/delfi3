@@ -48,7 +48,17 @@ Software to be installed to run this pipeline
 * Bedtools
 * Bedops
 * R 4.3
-Note that, in the scripts, Bowtie2, Samtools, Bedtools and R are loaded into the environment using `module load` command.  
+Note that, in the scripts, Bowtie2, Samtools, Bedtools and R are loaded into the environment using `module load` command.
+
+You will need to update `/delfi/RUN_DELFI.sh` with your local paths to `Bedops` and `fastp`.
+
+## Reference Files
+
+The reference files are not included in the repo because of large file size. Save these files in the `/references/hg19/` directory.
+
+Download the hg19 reference genome from UCSC Downloads Feb. 2009 (GRCh37/hg19) sequence files. Use bowtie2-build to create index of downloaded fasta file for alignment.
+
+Under `references/genome/`, it is necessary to add `cytosine_ref.hg19.starch`, a starch format file of the location of all cytosine nucleotides in the hg19 reference genome.
 
 
 ## Running the Delfi pipeline
