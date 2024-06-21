@@ -1,5 +1,5 @@
 library(getopt)
-source("../delfi/PlasmaTools_Functions.R")
+source("PlasmaTools_Functions.R")
 
 args <- commandArgs(trailingOnly = TRUE)
 hh <- paste(unlist(args), collapse = " ")
