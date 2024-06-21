@@ -2,7 +2,7 @@
 #
 library(getopt)
 
-source("/dcs05/scharpf/data/klebarbe/delfi/plasma_tools_replacement/delfi_pipeline/delfi/PlasmaTools_Functions.R")
+source("PlasmaTools_Functions.R")
 load("../references/hg19/filters.hg19.rda")
 
 args <- commandArgs(trailingOnly = TRUE)
