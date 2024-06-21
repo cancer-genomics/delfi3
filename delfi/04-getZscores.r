@@ -8,7 +8,7 @@ print(bindir)
 print(armsreffile)
 
 library(data.table)
-source("/dcs05/scharpf/data/klebarbe/delfi/plasma_tools_replacement/delfi_pipeline/delfi/PlasmaTools_Functions.R")
+source("PlasmaTools_Functions.R")
 
 
 binslist <- list.files(bindir, full.names=TRUE)
