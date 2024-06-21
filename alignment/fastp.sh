@@ -8,7 +8,6 @@
 #SBATCH -o logs/%x.o%A.%a.txt
 #SBATCH -e logs/%x.e%A.%a.txt
 
-#PATH="/users/scristia/.linuxbrew/bin:$PATH"
 FASTP=$2
 
 umask g+w
