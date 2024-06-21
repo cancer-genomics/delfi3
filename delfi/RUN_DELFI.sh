@@ -5,8 +5,8 @@
 
 set -eu
 
-bedops_path="/dcs04/scharpf/data/nvulpesc/tools/bedops-v2.4.41"
-fastp_path=/users/scristia/fastp
+bedops_path="/path/to/bedops-v2.4.41"
+fastp_path=/path/to/fastp
 gnom_build="hg19"
 sequencer="NovaSeq" #NovaSeq or HiSeq
 bin_size="5mb"
