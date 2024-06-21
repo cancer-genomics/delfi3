@@ -1,5 +1,5 @@
 library(getopt)
-source("/dcs05/scharpf/data/klebarbe/delfi/plasma_tools_replacement/delfi_pipeline/delfi/PlasmaTools_Functions.R")
+source("../delfi/PlasmaTools_Functions.R")
 
 args <- commandArgs(trailingOnly = TRUE)
 hh <- paste(unlist(args), collapse = " ")
