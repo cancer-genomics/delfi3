@@ -20,11 +20,8 @@ binsforzscores[,cov:=short+long]
 zscores <- getZscores(binsforzscores, refpanel=armsref, measure="cov")
 
 zscores[,normal.indices:=1]
-pas <- getPAscores(zscores) 
 
 zscores[,normal.indices:=NULL]
-pas[,normal.indices:=NULL]
 
 fwrite(zscores, paste0(outdir, "/zscores.",bin_size,".",gnom_build,".csv"))
-fwrite(pas, paste0(outdir, "/pas.",bin_size,".",gnom_build,".csv"))
 q('no')
