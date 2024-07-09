@@ -121,20 +121,6 @@ getArmMeans <- function(bins) {
 }
 
 
-getPAscores <- function(zscores, loo = TRUE) {
-  
-  topzs <- zscores[, .(zscore=zscore[order(abs(zscore), decreasing=TRUE)[1:5]],
-                       arm=arm[order(abs(zscore), decreasing=TRUE)[1:5]]),
-                   by=.(id, normal.indices)]
-  
-  pvals <-  topzs[,.(logP=sum(-log(2*pt(abs(zscore), 3,  lower=FALSE)))),
-                  by=.(id, normal.indices)]
-  
-  
-  pvals[,pascore:=abs(.loo.zscore(logP, normal.indices))]
-  pvals[]
-}
-
 
 .loo.zscore <-  function(x, indices) {
   zscores <- rep(NA, length(x))
