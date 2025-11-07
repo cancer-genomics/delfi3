@@ -41,6 +41,9 @@ project_directory_2023-01-31/
     └── sample2_R2.fastq.gz
 ```
 
+> [!IMPORTANT]
+> The repository underwent minor updates on 2025-11-07. To ensure exact reproducibility of earlier results, use tag v3.0.0. All subsequent analyses and publications should reference the current release or main branch.
+
 Software to be installed to run this pipeline
 * fastp
 * Bowtie2
