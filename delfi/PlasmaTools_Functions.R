@@ -99,6 +99,7 @@ gcCorrectLoess <- function(counts.mult, gc) {
   trend.counts <- counts.mult[trend.points]
   trend.gc <- gc[trend.points]
   num.sample.points <- min(length(trend.counts), 10E3L)
+  set.seed(1)
   samp <- sample(1:length(trend.counts), num.sample.points)
   #    pad counts and GC
   include <- c(which(gc==min(gc)), which(gc==max(gc)))
@@ -116,7 +117,7 @@ getArmMeans <- function(bins) {
   bins[,adjusted.cent:=adjusted-median(adjusted, na.rm=TRUE), by=id]
   arms <- bins[,.(armmean=mean(adjusted.cent, na.rm=TRUE)),
                by=.(id, arm)]
-  arms <- arms[,armmean:=armmean - mean(armmean, na.rm = TRUE)]
+  arms <- arms[,armmean:=armmean - mean(armmean, na.rm = TRUE), by=id]
   arms[]
 }
 
