@@ -13,7 +13,7 @@ This pipeline is meant to be run on a cluster. The scripts make use of SLURM for
 * Create an empty project directory. Navigate to that directory.
 * From within your project directory, run the following line of code: `git clone git@github.com:cancer-genomics/delfi3.git`. This will download the delfi3 pipeline from GitHub into a folder called `delfi3/`
 * Create an empty folder called `fastq` in the project directory. Populate this folder with fastq files (or symbolic links to fastq files) you wish to process. IMPORTANT: The Delfi pipeline makes stringent assumptions about how fastq files are named, so this is the time to format them. For each sample ID, the symbolic links should follow the following pattern: `${sample_id}_R1.fastq.gz  ${sample_id}_R2.fastq.gz`
-* Find the file: `delfi3/delfi/samples.txt`. Populate this file with all the sample IDs corresponding to the fastq files. For each pair of fastq files, there should be a single sample ID. There should be one sample ID per line, and there should be no duplicates in the file.
+* Create a list of samples: `delfi3/delfi/samples.txt`. Populate this file with all the sample IDs corresponding to the fastq files. For each pair of fastq files, there should be a single sample ID. There should be one sample ID per line, and there should be no duplicates in the file.
 * For clarity, the table below shows the relationship between the contents of the `fastq` directory and the contents of the `samples.txt` file.
 
 | `fastq` Directory     | `samples.txt` file |
